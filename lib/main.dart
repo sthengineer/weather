@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:weather/locator.dart';
 
 import 'core/widgets/main_wrapper.dart';
 
-void main() {
+void main() async{
+  await setup();
   runApp(const MyApp());
 }
 
@@ -14,7 +16,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-
       home: MainWrapper(),
     );
   }
